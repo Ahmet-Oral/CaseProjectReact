@@ -44,7 +44,7 @@ export default function AddWeather() {
                     });
                 }
                 console.log("Error:", error)
-                toast("Error: " + error.response.data.error_message)
+                toast("Error: Invalid Data")
             });
 
         if (result.status === 201) {

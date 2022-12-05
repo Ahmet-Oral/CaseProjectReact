@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, Input, Button, FormHelperText, FormGroup } from '@mui/material';
+import { FormControl, InputLabel, Input, Button, FormHelperText } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +26,6 @@ function Auth() {
             if(error.response.status === 423) { 
                 toast("Too many failed attempts - Account locked")
                 console.log("Account locked")
-                return;
             } else if(error.response.status === 400){
                 toast("Wrong Password!")
                 console.log("Wrong Password!")

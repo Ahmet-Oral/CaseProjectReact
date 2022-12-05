@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios";
-import {Link, useNavigate, useParams} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import toast from 'react-simple-toasts';
 import {RefreshToken} from "../services/HttpService";
 
@@ -14,7 +14,7 @@ export default function ViewUsers() {
             localStorage.getItem("role") === "ROLE_ADMIN" &&
             loadUsers();
         //console.log("useEffect - loaded users")
-    }, []); // [] to prevent infinite loop
+    }, []);
 
     const loadUsers = async () => {
         const accessTokenStr = localStorage.getItem('access_token');
