@@ -70,19 +70,13 @@ function Auth() {
         } 
     }
 
-
-
-
-
-
     return (
         <FormControl>
             <InputLabel style={{ top: 40 }}>username</InputLabel>
             <Input style={{ top: 40 }} onChange={(i) => handleUsername(i.target.value)} />
 
             <InputLabel style={{ top: 110 }}>password</InputLabel>
-            <Input style={{ top: 60 }}
-                onChange={(i) => handlePassword(i.target.value)} />
+            <Input type="password" style={{ top: 60 }} onChange={(i) => handlePassword(i.target.value)} />
 
 
             <Button variant="contained"
